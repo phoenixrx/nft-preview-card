@@ -58,30 +58,31 @@ article main section div.contenedor {
   background-position: center;
   background-size: cover;
   opacity: 1;
+  overflow: hidden;
 }
 
+.contenedor::before {
+  content: "";
+  color: white;
+  background-image: url("/images/icon-view.svg");
+  background-color: hsl(221, 87%, 50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  inset: 0;
+  place-items: center;
+  transform: translateY(100%);
+
+  opacity: 40%;
+}
+
+.contenedor:hover::before {
+  transform: translateY(0);
+}
 article main section div div.ver {
   position: relative;
   z-index: 2;
-}
-.ver {
-  padding-top: 35%;
-  left: 39%;
-  opacity: 1;
-}
-.ver:hover {
-  opacity: 1;
-}
-
-.preview:hover {
-  opacity: 1;
-}
-.preview {
-  opacity: 0;
-}
-
-div.contenedor:hover {
-  opacity: 0.3;
 }
 
 h1.titulo {
